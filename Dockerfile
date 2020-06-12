@@ -1,4 +1,4 @@
-FROM ubuntu:wily
+FROM ubuntu:latest
 RUN apt-get update && apt-get install -y openssh-server daemontools
 RUN mkdir -p /etc/myservices/sshd /var/run/sshd
 RUN echo "#!/bin/bash\nexec /usr/sbin/sshd" > /etc/myservices/sshd/run
